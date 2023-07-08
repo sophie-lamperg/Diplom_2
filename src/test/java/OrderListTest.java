@@ -21,6 +21,7 @@ public class OrderListTest {
         Assert.assertTrue(responseCreateAuth.extract().path("success"));
         responseCreateAuth.assertThat().body("total", instanceOf(Integer.class));
     }
+
     @Test
     public void getOrdersListWithoutToken(){
         ValidatableResponse responseCreateAuth = orderClient.ordersListWithoutToken();
